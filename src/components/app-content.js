@@ -1,4 +1,3 @@
-'use strict'
 import React from 'react'
 import PropTypes from 'prop-types'
 import Search from './search'
@@ -6,12 +5,22 @@ import UserInfo from './user-info'
 import Actions from './actions'
 import Repos from './repos'
 
-const AppContent = ({ userinfo, repos, starred,isFetching, handleSearch, getRepos, getStarred }) => (
-  
-    <div className="app">
-    <div className="Search"> <Search handleSearch={handleSearch} /></div>
+const AppContent = ({
+  userinfo,
+  repos,
+  starred,
+  isFetching,
+  handleSearch,
+  getRepos,
+  getStarred,
+}) => (
+  <div className="app">
+    <div className="Search">
+      {' '}
+      <Search handleSearch={handleSearch} />
+    </div>
     {isFetching && <div className="dw">Carregando...</div>}
-    {!!userinfo && <UserInfo  userInfo={userinfo} />}
+    {!!userinfo && <UserInfo userInfo={userinfo} />}
     {!!userinfo && <Actions getRepos={getRepos} getStarred={getStarred} />}
 
     {!!repos.length && (
@@ -22,7 +31,6 @@ const AppContent = ({ userinfo, repos, starred,isFetching, handleSearch, getRepo
       <Repos className="starred" title="Favoritos:" repos={starred} />
     )}
   </div>
-  
 )
 AppContent.propTypes = {
   userInfo: PropTypes.object,

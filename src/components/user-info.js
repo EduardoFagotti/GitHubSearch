@@ -1,13 +1,13 @@
-'use strict'
-
 import React from 'react'
 import PropTypes from 'prop-types'
 
 const UserInfo = ({ userInfo }) => (
   <div className="user-info">
-    <img className='photo' src={userInfo.photo} />
+    <img alt="photo" className="photo" src={userInfo.photo} />
     <h1 className="h1">
-      <a className="name" href={`https://github.com/${userInfo.login}`}>{userInfo.username}</a>
+      <a className="name" href={`https://github.com/${userInfo.login}`}>
+        {userInfo.username}
+      </a>
     </h1>
 
     <ul className="repos-info">

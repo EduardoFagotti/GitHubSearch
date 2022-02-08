@@ -1,5 +1,3 @@
-'use strict'
-
 import PropTypes from 'prop-types'
 
 const Repos = ({ className, title, repos }) => (

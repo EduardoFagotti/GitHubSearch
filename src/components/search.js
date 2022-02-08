@@ -1,11 +1,10 @@
-'use strict'
-
 import React from 'react'
 import PropTypes from 'prop-types'
 
 const Search = ({ handleSearch }) => (
   <div className="search">
-    <input className="pq"
+    <input
+      className="pq"
       type="search"
       placeholder=" Usuario GitHub... "
       onKeyUp={handleSearch}
