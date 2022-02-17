@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Search from './search'
+import Search from './Search/search'
 import UserInfo from './user-info'
 import Actions from './actions'
 import Repos from './repos'

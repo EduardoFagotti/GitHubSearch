@@ -1,10 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import './styles.css'
 
 const Search = ({ handleSearch }) => (
   <div className="search">
     <input
-      className="pq"
+      className="inputSearch"
       type="search"
       placeholder=" Usuario GitHub... "
       onKeyUp={handleSearch}
